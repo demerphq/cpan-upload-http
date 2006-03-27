@@ -1,0 +1,89 @@
+
+				ChangeLog
+
+2.3 bradfitz 2006-03-27
+
+	* remove FTP support, rename cpan-upload-http for now, at least
+	  until upstream has HTTP post support
+
+2.2 neilb 04-jul-2002
+
+	* Added a -directory option (with -dir alias) for specifying
+	  a subdirectory in your CPAN directory. Suggested by Ilya.
+
+2.1 neilb 01-jul-2002
+
+	* changed all references to pause.kbx.de to pause.perl.org
+
+2.0 neilb 08-feb-2002
+
+	* If you don't give your CPAN password in .pause or via a switch,
+	  you'll now be prompted for it, with echo'ing turned off.
+	  Suggested by Ed Avis. This added a dependency on Term::ReadKey.
+	* If an ftp upload of a file fails, then you're now prompted
+	  to see if you want to continue. We now only try and POST to
+	  the PAUSE site for files which we actually managed to upload :-)
+	  Also suggested by Ed Avis.
+	* Added a -non_interactive (or -ni) switch. If this is given,
+	  then cpan-upload will never prompt (see above two points),
+	  but will also do some default action (eg warn or die).
+	* Various documentation updates.
+	* Updated versions of AppConfig::Std and Pod::Usage that we
+	  depend on - APIs have changed, so need latest versions.
+
+1.9 neilb 11-march-2001
+
+	* Fixed typos in a couple of messages.
+	* Tidied up the documentation.
+	* Added mention of ftp_gateway to the section on CONFIGURATION FILE.
+	* Fixed a bad pod sequence: b<...> instead of B<...>
+	* Added SCRIPT CATEGORIES and PREREQUISITES pod sections,
+	  which are used by cpan scripts. Since this gets uploaded in a tarball,
+	  it won't currently get picked up by the cpan scripts stuff.
+
+1.8 neilb 6-march-2001
+
+	Dang! Silly bug when getting the basename of files being uploaded.
+
+1.7 neilb 6-march-2001
+
+	If you specify -debug, then -verbose is now turned on for you.
+
+	Too many newlines in the output - _verbose and _debug were
+	adding them, unnecessarily.
+
+1.6 neilb 6-march-2001
+
+	[can't remember when I made all these changes, some time
+	between 1.3 and now :-]
+
+	Updated to support the current upload interface on PAUSE.
+	Updated to use AppConfig::Std.
+	Tidied up the FTP server, fixed the handling of proxy/firewall.
+	Use File::Basename to portably get the filename if you've
+	given the full path.
+
+1.3 neilb 24-july-1998
+
+	Switched to using HTTP::Request::Common (POST function).
+
+	Now using Pod::Usage to generate the output for -help message.
+	Added a -doc switch which displays the full pod (Pod::Usage again).
+
+	Compacted the code using App::Config, given some new features
+	in the latest version of App::Config.
+
+	Added a prerequisite clause in Makefile.PL
+
+1.2 neilb 2-april-1998
+
+	The password was set to be expanded for variables by App::Config,
+	since this is the default. Turned off this feature for password,
+	since it can cause weirdness if you have potential variable refs
+	in your PAUSE password. Thanks to Andy Wardley for having a
+	bizarro password.
+
+1.1 neilb
+
+	first public release. only announced to p5p.
+

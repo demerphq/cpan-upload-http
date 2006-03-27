@@ -1,0 +1,6 @@
+cpan-upload-http
+README
+Makefile.PL
+MANIFEST
+ChangeLog
+META.yml                                 Module meta-data (added by MakeMaker)
