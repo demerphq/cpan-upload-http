@@ -12,7 +12,7 @@ use LWP::UserAgent;
 use HTTP::Status;
 use File::Basename;
 
-$VERSION = "2.3";
+$VERSION = "2.4";
 
 #-----------------------------------------------------------------------
 #       Configuration constants and globals

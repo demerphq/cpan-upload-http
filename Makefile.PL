@@ -13,6 +13,7 @@ use ExtUtils::MakeMaker;
                NAME          => 'cpan-upload-http',
                EXE_FILES     => [ 'cpan-upload-http' ],
                DISTNAME      => 'cpan-upload-http',
+               ABSTRACT      => 'upload file(s) to CPAN using HTTP POSTs to PAUSE, not FTP',
                VERSION_FROM  => 'cpan-upload-http',
                PREREQ_PM     => {
                    'AppConfig::Std'        => 1.05,
