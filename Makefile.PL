@@ -17,9 +17,10 @@ use ExtUtils::MakeMaker;
                VERSION_FROM  => 'cpan-upload-http',
                PREREQ_PM     => {
                    'AppConfig::Std'        => 1.05,
-                   'Pod::Usage'            => 1.14,
-                   'HTTP::Request::Common' => 0,
                    'File::Basename'        => 2.28,
+                   'HTTP::Request::Common' => 0,
+                   'LWP::UserAgent'        => 0,
+                   'Pod::Usage'            => 1.14,
                    'Term::ReadKey'         => 0,
                },
                dist          => {COMPRESS => 'gzip', SUFFIX => 'gz'},
